@@ -1,25 +1,6 @@
-import network
+from config import const as SETTINGS
 import machine
 import socket
-
-# Connect to Wireless AP
-
-# ssid = input("SSID:\n")
-# passphrase = input("Passphrase:\n")
-
-sta_if = network.WLAN(network.STA_IF)
-ap_if = network.WLAN(network.AP_IF)
-
-def do_connect():
-    import network
-    ap_if.active(False)
-    if not sta_if.isconnected():
-        print('connecting to network...')
-        sta_if.active(True)
-        sta_if.connect('WiFi', 'acorn77tog')
-        while not sta_if.isconnected():
-            pass
-    print('network config:', sta_if.ifconfig())
 
 pins = [machine.Pin(i, machine.Pin.IN) for i in (0, 2, 4, 5, 12, 13, 14, 15)]
 
@@ -55,4 +36,3 @@ while True:
     cl.close()
 
 do_connect()
-# http_server()
