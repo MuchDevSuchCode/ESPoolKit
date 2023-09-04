@@ -9,3 +9,4 @@ lsusb
 
 
 https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/
+https://docs.micropython.org/en/latest/esp8266/tutorial/network_basics.html
